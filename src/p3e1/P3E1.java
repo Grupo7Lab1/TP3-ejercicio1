@@ -110,7 +110,7 @@ public class P3E1 extends javax.swing.JFrame {
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(38, Short.MAX_VALUE))
             .addGroup(layout.createSequentialGroup()
-                .addGap(70, 70, 70)
+                .addGap(27, 27, 27)
                 .addComponent(jBOcultar)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jBVer)
@@ -136,7 +136,7 @@ public class P3E1 extends javax.swing.JFrame {
     }//GEN-LAST:event_jBRegistrarActionPerformed
 
     private void jBOcultarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBOcultarActionPerformed
-       
+       jPcampoassword.setEchoChar('*');
     }//GEN-LAST:event_jBOcultarActionPerformed
 
     private void jBVerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBVerActionPerformed
