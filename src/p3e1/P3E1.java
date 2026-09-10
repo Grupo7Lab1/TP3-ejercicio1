@@ -132,7 +132,14 @@ public class P3E1 extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jBRegistrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBRegistrarActionPerformed
-       
+         String usuario = jTCampoUsuario.getText();
+        String clave = new String(jPcampoassword.getPassword());
+
+        if (usuario.equals("alumno@ulp.edu.ar") && clave.equals("12345678")) {
+            JOptionPane.showMessageDialog(this, "Bienvenido " + usuario);
+        } else {
+            JOptionPane.showMessageDialog(this, "Usuario y/o contraseña incorrectos");
+        }
     }//GEN-LAST:event_jBRegistrarActionPerformed
 
     private void jBOcultarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBOcultarActionPerformed
