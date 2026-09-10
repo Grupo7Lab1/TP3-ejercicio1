@@ -147,7 +147,7 @@ public class P3E1 extends javax.swing.JFrame {
     }//GEN-LAST:event_jBOcultarActionPerformed
 
     private void jBVerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBVerActionPerformed
-       
+        jPcampoassword.setEchoChar((char) 0);
     }//GEN-LAST:event_jBVerActionPerformed
 
     /**
