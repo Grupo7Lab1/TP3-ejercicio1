@@ -45,7 +45,7 @@ public class P3E1 extends javax.swing.JFrame {
 
         jPanel1.setBackground(new java.awt.Color(234, 242, 186));
 
-        jLTitulo.setBackground(new java.awt.Color(255, 255, 255));
+        jLTitulo.setBackground(new java.awt.Color(255, 255, 181));
         jLTitulo.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLTitulo.setForeground(new java.awt.Color(51, 51, 255));
         jLTitulo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -53,15 +53,18 @@ public class P3E1 extends javax.swing.JFrame {
 
         jLUsuario.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLUsuario.setForeground(new java.awt.Color(31, 41, 55));
+        jLUsuario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/user.png"))); // NOI18N
         jLUsuario.setText("Usuario");
 
         jLContraseña.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLContraseña.setForeground(new java.awt.Color(31, 41, 55));
+        jLContraseña.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/padlock.png"))); // NOI18N
         jLContraseña.setText("Contraseña");
 
         jBRegistrar.setBackground(new java.awt.Color(31, 70, 120));
         jBRegistrar.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jBRegistrar.setForeground(new java.awt.Color(255, 255, 255));
+        jBRegistrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/add (2).png"))); // NOI18N
         jBRegistrar.setText("Registrar");
         jBRegistrar.setFocusPainted(false);
         jBRegistrar.addActionListener(this::jBRegistrarActionPerformed);
@@ -69,14 +72,18 @@ public class P3E1 extends javax.swing.JFrame {
         jBVer.setBackground(new java.awt.Color(51, 51, 51));
         jBVer.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jBVer.setForeground(new java.awt.Color(255, 255, 255));
+        jBVer.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/eye.png"))); // NOI18N
         jBVer.setText("Ver");
+        jBVer.setPreferredSize(new java.awt.Dimension(80, 30));
         jBVer.addActionListener(this::jBVerActionPerformed);
 
         jBOcultar.setBackground(new java.awt.Color(51, 51, 51));
         jBOcultar.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jBOcultar.setForeground(new java.awt.Color(255, 255, 255));
+        jBOcultar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/hidden.png"))); // NOI18N
         jBOcultar.setText("Ocultar");
         jBOcultar.setFocusPainted(false);
+        jBOcultar.setPreferredSize(new java.awt.Dimension(80, 30));
         jBOcultar.addActionListener(this::jBOcultarActionPerformed);
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -85,31 +92,29 @@ public class P3E1 extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLContraseña))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jBRegistrar, javax.swing.GroupLayout.PREFERRED_SIZE, 178, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jBOcultar)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jBVer, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addComponent(jTCampoUsuario, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 250, Short.MAX_VALUE)
-                        .addComponent(jPcampoassword, javax.swing.GroupLayout.Alignment.LEADING))
-                    .addComponent(jBRegistrar, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(0, 0, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(127, Short.MAX_VALUE)
-                .addComponent(jLTitulo)
-                .addGap(119, 119, 119))
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLContraseña)
+                            .addComponent(jLUsuario))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jPcampoassword, javax.swing.GroupLayout.DEFAULT_SIZE, 250, Short.MAX_VALUE)
+                            .addComponent(jTCampoUsuario, javax.swing.GroupLayout.DEFAULT_SIZE, 250, Short.MAX_VALUE)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                                .addComponent(jBOcultar, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jBVer, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jLTitulo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                .addGap(0, 31, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(31, 31, 31)
                 .addComponent(jLTitulo)
-                .addGap(43, 43, 43)
+                .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLUsuario)
                     .addComponent(jTCampoUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -119,11 +124,11 @@ public class P3E1 extends javax.swing.JFrame {
                     .addComponent(jPcampoassword, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jBOcultar)
-                    .addComponent(jBVer))
-                .addGap(18, 18, 18)
-                .addComponent(jBRegistrar)
-                .addContainerGap(74, Short.MAX_VALUE))
+                    .addComponent(jBOcultar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jBVer, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jBRegistrar, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(61, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
