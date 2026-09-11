@@ -34,101 +34,111 @@ public class P3E1 extends javax.swing.JFrame {
         jLTitulo = new javax.swing.JLabel();
         jLUsuario = new javax.swing.JLabel();
         jTCampoUsuario = new javax.swing.JTextField();
-        jLabel1 = new javax.swing.JLabel();
+        jLContraseña = new javax.swing.JLabel();
         jPcampoassword = new javax.swing.JPasswordField();
         jBRegistrar = new javax.swing.JButton();
-        jBOcultar = new javax.swing.JButton();
         jBVer = new javax.swing.JButton();
+        jBOcultar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Credenciales");
 
-        jLTitulo.setText("Inicio de Sesion");
+        jPanel1.setBackground(new java.awt.Color(234, 242, 186));
 
+        jLTitulo.setBackground(new java.awt.Color(255, 255, 255));
+        jLTitulo.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLTitulo.setForeground(new java.awt.Color(51, 51, 255));
+        jLTitulo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLTitulo.setText("INICIO DE SESION");
+
+        jLUsuario.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLUsuario.setForeground(new java.awt.Color(31, 41, 55));
         jLUsuario.setText("Usuario");
 
-        jLabel1.setText("Contraseña");
+        jLContraseña.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLContraseña.setForeground(new java.awt.Color(31, 41, 55));
+        jLContraseña.setText("Contraseña");
 
+        jBRegistrar.setBackground(new java.awt.Color(31, 70, 120));
+        jBRegistrar.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jBRegistrar.setForeground(new java.awt.Color(255, 255, 255));
         jBRegistrar.setText("Registrar");
+        jBRegistrar.setFocusPainted(false);
         jBRegistrar.addActionListener(this::jBRegistrarActionPerformed);
+
+        jBVer.setBackground(new java.awt.Color(51, 51, 51));
+        jBVer.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jBVer.setForeground(new java.awt.Color(255, 255, 255));
+        jBVer.setText("Ver");
+        jBVer.addActionListener(this::jBVerActionPerformed);
+
+        jBOcultar.setBackground(new java.awt.Color(51, 51, 51));
+        jBOcultar.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jBOcultar.setForeground(new java.awt.Color(255, 255, 255));
+        jBOcultar.setText("Ocultar");
+        jBOcultar.setFocusPainted(false);
+        jBOcultar.addActionListener(this::jBOcultarActionPerformed);
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLContraseña))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(28, 28, 28)
-                        .addComponent(jLTitulo, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(40, 40, 40)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jLUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(jTCampoUsuario))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jLabel1)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jPcampoassword)))))
-                .addContainerGap())
+                        .addComponent(jBOcultar)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jBVer, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addComponent(jTCampoUsuario, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 250, Short.MAX_VALUE)
+                        .addComponent(jPcampoassword, javax.swing.GroupLayout.Alignment.LEADING))
+                    .addComponent(jBRegistrar, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(0, 0, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addGap(0, 148, Short.MAX_VALUE)
-                .addComponent(jBRegistrar)
-                .addGap(131, 131, 131))
+                .addContainerGap(127, Short.MAX_VALUE)
+                .addComponent(jLTitulo)
+                .addGap(119, 119, 119))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(22, 22, 22)
+                .addContainerGap()
                 .addComponent(jLTitulo)
-                .addGap(27, 27, 27)
+                .addGap(43, 43, 43)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLUsuario)
                     .addComponent(jTCampoUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1)
+                    .addComponent(jLContraseña)
                     .addComponent(jPcampoassword, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 28, Short.MAX_VALUE)
-                .addComponent(jBRegistrar))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jBOcultar)
+                    .addComponent(jBVer))
+                .addGap(18, 18, 18)
+                .addComponent(jBRegistrar)
+                .addContainerGap(74, Short.MAX_VALUE))
         );
-
-        jBOcultar.setText("Ocultar");
-        jBOcultar.addActionListener(this::jBOcultarActionPerformed);
-
-        jBVer.setText("Ver");
-        jBVer.addActionListener(this::jBVerActionPerformed);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(38, Short.MAX_VALUE))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(27, 27, 27)
-                .addComponent(jBOcultar)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jBVer)
-                .addGap(77, 77, 77))
+            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(39, 39, 39)
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jBOcultar)
-                    .addComponent(jBVer))
-                .addContainerGap(60, Short.MAX_VALUE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jBRegistrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBRegistrarActionPerformed
@@ -176,14 +186,14 @@ public class P3E1 extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jBOcultar;
-    private javax.swing.JButton jBRegistrar;
-    private javax.swing.JButton jBVer;
-    private javax.swing.JLabel jLTitulo;
-    private javax.swing.JLabel jLUsuario;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JPasswordField jPcampoassword;
-    private javax.swing.JTextField jTCampoUsuario;
+    javax.swing.JButton jBOcultar;
+    javax.swing.JButton jBRegistrar;
+    javax.swing.JButton jBVer;
+    javax.swing.JLabel jLContraseña;
+    javax.swing.JLabel jLTitulo;
+    javax.swing.JLabel jLUsuario;
+    javax.swing.JPanel jPanel1;
+    javax.swing.JPasswordField jPcampoassword;
+    javax.swing.JTextField jTCampoUsuario;
     // End of variables declaration//GEN-END:variables
 }
